@@ -1,0 +1,39 @@
+package com.codarchy.presentation
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.ComposeView
+import androidx.fragment.app.Fragment
+import com.codarchy.common.theme.MyApplicationTheme
+
+class LandingFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return ComposeView(requireContext()).apply {
+            setContent {
+                MyApplicationTheme(true) {
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colors.background
+                    ) {
+                        Column(modifier = Modifier.verticalScroll(state = ScrollState(0), true)) {
+                            // todo add content here
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

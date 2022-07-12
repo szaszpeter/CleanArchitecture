@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 // Allow references to generated code
@@ -71,7 +72,6 @@ android {
 
 
 dependencies {
-    implementation project(":common")
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
