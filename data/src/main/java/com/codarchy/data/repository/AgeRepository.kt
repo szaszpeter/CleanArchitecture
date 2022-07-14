@@ -8,5 +8,5 @@ import javax.inject.Singleton
 
 @Singleton
 class AgeRepository @Inject constructor(private val api: AgeApi) {
-    suspend fun requestAgeEstimation(name: String): AgeEstimation = api.getAgeEstimation().toAgeEstimation()
+    suspend fun requestAgeEstimation(name: String): AgeEstimation = api.getAgeEstimation(name).toAgeEstimation()
 }
