@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 // Allow references to generated code
@@ -72,6 +73,7 @@ android {
 
 dependencies {
     implementation project(":common")
+    implementation project(":domain")
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -125,5 +127,6 @@ dependencies {
     // HILT
     implementation("com.google.dagger:hilt-android:2.40.5")
     kapt("com.google.dagger:hilt-android-compiler:2.40.5")
+    implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
 
 }
