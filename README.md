@@ -15,6 +15,14 @@ Mise En Place for any new project that needs to follow the CA Guideline.
 
 <img width="673" alt="Screenshot 2022-07-14 at 16 06 39" src="https://user-images.githubusercontent.com/5732276/179001800-3e4f1361-b94b-429c-9e3d-790ef4479ea6.png">
 
+## Sources of inspiration
+
+- https://fernandocejas.com/2018/05/07/architecting-android-reloaded/
+- https://github.com/android/architecture-samples - Architecture Blueprints
+- https://javadevguy.wordpress.com/2017/07/27/a-detailed-analysis-of-the-clean-architecture-from-an-object-oriented-perspective/ - Why Object Oriented Software Should Avoid the Clean Architecture Pattern
+- https://medium.com/@douglas.iacovelli/how-to-handle-errors-with-retrofit-and-coroutines-33e7492a912 - Error Handling for Retrofit
+- https://proandroiddev.com/enabling-cache-offline-support-on-android-using-room-4b82ae0c9c88 - Offline Caching With Room
+
 
 ## Contributing
 If you like this idea and would like to extend it to something newer and bigger, you can do it by opening pull requests. For more details on how to add new 
