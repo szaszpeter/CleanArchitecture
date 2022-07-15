@@ -49,6 +49,8 @@ fun DisplayAgeEstimationItem(viewModel: LandingViewModel) {
         when (state) {
             is Idle -> GenericContent()
             is Loading -> Loading()
+            is NetworkError -> ErrorContent()
+            is GenericError -> ErrorContent()
             is AgeEstimationReady -> DisplayAgeEstimationValue(state.ageEstimation)
         }
     }
@@ -146,6 +148,20 @@ fun GenericContent() {
                 }
                 withStyle(style = SpanStyle(color = Color.Gray)) {
                     append("button, to trigger the api call. ")
+                }
+            }
+        },
+        modifier = Modifier.padding(16.dp)
+    )
+}
+
+@Composable
+fun ErrorContent() {
+    Text(
+        buildAnnotatedString {
+            withStyle(style = ParagraphStyle(lineHeight = 28.sp)) {
+                withStyle(style = SpanStyle(color = Color.Red)) {
+                    append("Uff..something went wrong!")
                 }
             }
         },
